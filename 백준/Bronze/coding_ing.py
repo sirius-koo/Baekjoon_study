@@ -1,10 +1,9 @@
-#아직 끝내지 못한 코드
+#백준 기다리는중 오류로 인한 코드 저장
 #BOJ_11021
 T = int(input())
+sum_lst = []
 for i in range(0, T):
-    sum_list = []
-    A, B = input().split()
-    sum_list.append(int(A)+int(B))
-for i in range(1, T + 1):
-    print("Case #{}: ".format(i), sum_list[i - 1])
-...
+    A, B = map(int, input().split())
+    sum_lst.append(A+B)
+for i in range(0, T):
+    print("Case #{}:".format(i + 1), sum_lst[i])

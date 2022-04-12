@@ -1,12 +1,14 @@
-#BOJ_11022
-#A + B 구현을 어떻게 해야할지 고민중!
-T = int(input())
-sum_lst = []
-for i in range(0, T):
-    A, B = map(int, input().split())
-    A_lst = A.split()
-    B_lst = B.split()
-    sum_lst.append(A+B)
-for i in range(0, T):
-    print("Case #{}:".format(i + 1), A_lst[i], "+", B_lst[i], ":", sum_lst[i])
-...
+#BOJ_11653
+N = int(input())
+i = 2
+while N >= 2:
+    if N % i == 0:
+        print(i)
+        N = N / i
+    else:
+        i += 1
+'''
+입력-정수 N
+출력-N의 소인수분해 결과를 한 줄에 하나씬 오름차순으로 N이 1인 경우 아무것도 출력x
+소인수분해 이므로 i는 1부터가 아닌 2부터 시작해야 함. 계속 분해해야 하므로 N을 i로 나눈 값을 N에 대입!
+'''

@@ -6,7 +6,7 @@ def gcd(x, y):  #최대공약수 구하기
   else:
     return gcd(y, x%y)
   
-def lcm(x, y):  ## 최소공배수 구하기
+def lcm(x, y):  # 최소공배수 구하기
   result = (x*y) // gcd(x,y)
   return result
 
